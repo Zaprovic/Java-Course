@@ -1,3 +1,4 @@
+package Module1;
 class Animal{
 
     String nombre;
