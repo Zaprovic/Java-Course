@@ -1,4 +1,4 @@
-package Module1;
+package Module1.ex1;
 public class Familia {
 
     Animal papa;

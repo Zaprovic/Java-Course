@@ -1,4 +1,5 @@
-package Module1;
+package Module1.ex1;
+
 class Animal{
 
     String nombre;
