@@ -1,4 +1,4 @@
-package Module1.ex2;
+package Module1.ex2.Java;
 
 public class Asiento {
 
