@@ -15,31 +15,29 @@ public class FamiliaAnimales {
         animal2.nombre = "Caballo";
         animal2.peso = 98.2;
 
-        System.out.println(animal1.peso);
+        System.out.println(animal1.nombre + " se va a casar con "
+        + animal2.nombre);
 
-        // System.out.println(animal1.nombre + " se va a casar con "
-        // + animal2.nombre);
+        animal1.setPareja(animal2);
+        animal2.setPareja(animal1);
 
-        // animal1.setPareja(animal2);
-        // animal2.setPareja(animal1);
+        Familia familia = animal1.procrear("Cebrallo");
 
-        // Familia familia = animal1.procrear("Cebrallo");
+        if(familia != null){
+            familia.imprimir();
+            System.out.println(familia.hijo);
 
-        // if(familia != null){
-        //     familia.imprimir();
-        //     System.out.println(familia.hijo);
+        }
 
-        // }
+        else{
+            System.out.println("No se pudo formar familia");
+        }
 
-        // else{
-        //     System.out.println("No se pudo formar familia");
-        // }
+        System.out.println("Total de animales: " + Animal.totalAnimales);
 
-        // System.out.println("Total de animales: " + Animal.totalAnimales);
+        Animal.morir(animal2);
 
-        // Animal.morir(animal2);
-
-        // System.out.println("Nuevo total de animales: " + Animal.totalAnimales);
+        System.out.println("Nuevo total de animales: " + Animal.totalAnimales);
 
 
 

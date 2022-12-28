@@ -10,52 +10,44 @@ public class Auto {
     int registro = 0;
     static int cantidadCreados;
 
-    int cantidadAsientos(Asiento[] asientos){
-        this.asientos = asientos;
-
+    int cantidadAsientos(){
         return asientos.length;
     }
 
-    static String verificarIntegridad(){
+    String verificarIntegridad(){
 
-        return "0";
+        Auto auto = new Auto();
+        
+        if(motor.registro == auto.registro){
+            return "Auto original";
+
+        }
+
+        else{
+            return "Las piezas no son originales";
+        }
+        
     }
 
 
     public static void main(String[] args){
 
         Auto auto1 = new Auto();
+        
         cantidadCreados++;
 
-        Asiento asiento1 = new Asiento();
-        Asiento asiento2 = new Asiento();
-        Asiento asiento3 = new Asiento();
-        Asiento asiento4 = new Asiento();
+        System.out.println("Hay " + cantidadCreados + " autos en total");
 
-        Asiento[] asientos = {asiento1,asiento2,asiento3,asiento4};
-        String[] colores = {"rojo","verde","morado","negro"};
+        //Auto 1
+        String marca1 = auto1.marca = "Mercedes Benz";
+        int precio1 = auto1.precio = 10000;
+        String modelo1 = auto1.modelo = "GLA 200";
 
+        System.out.println("\nAuto 1" + 
+        "\nModelo: " + modelo1 + 
+        "\nPrecio: " + precio1 + 
+        "\nMarca: " + marca1);
 
-        for(int i = 0; i < asientos.length; i++){
-
-            asientos[i].cambiarColor(colores[i]);
-
-        }
-
-
-        for(int i = 0; i < asientos.length; i++){
-            System.out.println("Color de asiento # " + (i+1) + ": " + asientos[i].color);
-
-        }
-
-        System.out.println("\nNumero de asientos del auto: " + auto1.cantidadAsientos(asientos));
-        System.out.println("Numero de autos: " + cantidadCreados);
-        
-    
-
-    
+        System.out.println(auto1.verificarIntegridad());
     }
-
-
-    
 }
