@@ -1,5 +1,6 @@
 package Module1.Exercises.Taller1_Java;
 
+@SuppressWarnings("unused")
 public class Main {
 
     public static void main(String[] args){
