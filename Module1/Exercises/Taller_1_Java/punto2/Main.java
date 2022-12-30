@@ -1,4 +1,4 @@
-package Module1.Exercises.Taller_1_Java;
+package Module1.Exercises.Taller_1_Java.punto2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
