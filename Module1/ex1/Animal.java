@@ -36,7 +36,7 @@ class Animal{
     Familia procrear(String nombreHijo){
 
         if(pareja == null){
-            System.out.println(this.nombre + " no tiene pareja");
+            System.out.println(nombre + " no tiene pareja");
             return null;
 
         }
@@ -50,7 +50,7 @@ class Animal{
 
         Familia f = new Familia();
 
-        if (this.genero.equals("M")){
+        if (genero.equals("M")){
             f.mama = pareja;
             f.papa = this;
 
@@ -58,7 +58,7 @@ class Animal{
 
         else{
             f.mama = this;
-            f.papa = this.pareja;
+            f.papa = pareja;
         }
 
         Animal hijo = f.mama.tenerHijo(nombreHijo);

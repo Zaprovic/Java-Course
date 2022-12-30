@@ -25,17 +25,8 @@ class Main:
         auto1 = Auto(modelo='X6 Competition',precio=150000,marca='BMW',registro=12,asientos=asientosLista,motor=motor1)
         
         auto1.cantidad += 1
-        
-        
-        print(f'''Auto 1\n
-    Modelo: {auto1.modelo}
-    Marca: {auto1.marca}
-    Precio: {auto1.precio}
-    Registro: {auto1.registro}
-    Asientos: [{asiento1.color}:{asiento1.registro}, {asiento2.color}:{asiento2.registro}, {asiento3.color}:{asiento3.registro}, {asiento4.color}:{asiento4.registro}]
-    Motor: [Tipo: {motor1.tipo}, Registro: {auto1.motor.registro}, Numero de cilindros: {auto1.motor.numeroCilindros}]
-    Numero de asientos: {auto1.cantidadAsientos()}
-    Legitimidad: {auto1.verificarIntegridad()}''')
+
+        auto1.carInfo()
 
 
 class Asiento:
@@ -45,13 +36,14 @@ class Asiento:
         self.precio = precio
         self.registro = registro
     
-    def cambiarColor(self,colorValue):
+    def cambiarColor(self,color):
 
-        if colorValue == 'verde' or colorValue =='rojo' or colorValue =='amarillo' or colorValue =='negro' or colorValue =='blanco':
-            self.color = colorValue
+        if color == 'verde' or color =='rojo' or color =='amarillo' or color =='negro' or color =='blanco':
+            self.color = color
 
         else:
             return
+
 
 class Auto:
     
@@ -83,11 +75,24 @@ class Auto:
 
         if len(set(asientosRegistros)) == 1:
         
-            if self.registro == self.motor.registro:
-                    return f'Auto original' 
+            if self.registro == self.motor.registro and self.registro == asientosRegistros[0]:
+                    return 'Auto original' 
+            else:
+                return 'Las piezas no son originales'
 
         else:
             return 'Las piezas no son originales'
+
+    def carInfo(self):
+
+        print(f'''Auto 1\n
+    Modelo: {self.modelo}
+    Marca: {self.marca}
+    Precio: {self.precio}
+    Registro: {self.registro}
+    Motor: [Tipo: {self.motor.tipo}, Registro: {self.motor.registro}, Numero de cilindros: {self.motor.numeroCilindros}]
+    Numero de asientos: {self.cantidadAsientos()}
+    Legitimidad: {self.verificarIntegridad()}''')
 
 
 class Motor:
@@ -97,16 +102,17 @@ class Motor:
         self.tipo = tipo
         self.registro = registro
 
-    def cambiarRegistro(self,value):
-        self.registro = value
+    def cambiarRegistro(self,registro):
+        self.registro = registro
 
-    def asignarTipo(self,typeMotor):
+    def asignarTipo(self,tipo):
 
-        if typeMotor == 'gasolina' or typeMotor == 'electrico':
-            self.tipo = typeMotor
+        if tipo == 'gasolina' or tipo == 'electrico':
+            self.tipo = tipo
 
         else:
             return 
+
 
 if __name__ == '__main__':
     Main()

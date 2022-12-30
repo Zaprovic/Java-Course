@@ -9,7 +9,6 @@ public class Familia {
 
     void imprimir(){
         
-
         if(hijo.genero.equals("M")){
             genero = "Masculino";
 
