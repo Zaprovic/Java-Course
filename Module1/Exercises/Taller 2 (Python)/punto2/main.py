@@ -23,10 +23,14 @@ class Main:
 
         #Auto
         auto1 = Auto(modelo='X6 Competition',precio=150000,marca='BMW',registro=12,asientos=asientosLista,motor=motor1)
-        
         auto1.cantidad += 1
 
+        print(auto1.__dict__)
+        print('\n')
+
         auto1.carInfo()
+
+        print(f'\n Total de autos: {Auto.totalAutos}')
 
 
 class Asiento:
@@ -46,6 +50,7 @@ class Asiento:
 
 
 class Auto:
+    totalAutos = 0
     
     def __init__(self,modelo,precio,marca,motor,registro=None,asientos=None):
         self.modelo = modelo
@@ -54,6 +59,8 @@ class Auto:
         self.motor = motor
         self.registro = registro
         self.cantidad = 0
+
+        Auto.totalAutos += 1
 
         if asientos is not None:
             self.asientos = asientos

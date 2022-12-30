@@ -1,24 +1,18 @@
-class Main:
-
+class Main():
     def __init__(self):
-        person1 = Person('Loki',16,'Old Norse','M','Icelandic')
+        employee1 = Employee("Jacob","Elordi",5000)
+        print(employee1.fullname())
 
-        person1.greeting()
 
+class Employee:
 
-class Person:
-
-    def __init__(self,name,age,language,gender,nationality):
+    def __init__(self,name,lastName,pay):
         self.name = name
-        self.age = age
-        self.language = language
-        self.gender = gender
-        self.nationality = nationality
+        self.lastName = lastName
+        self.pay = pay
 
-            
-    def greeting(self):
-        print(f"Hello! My name is {self.name}")
+    def fullname(self):
+        return f'{self.name} {self.lastName}'
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     Main()
