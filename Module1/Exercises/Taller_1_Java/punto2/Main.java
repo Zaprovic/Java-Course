@@ -28,7 +28,7 @@ public class Main {
 
         //Auto
         Auto auto = new Auto("Cx-5",20000,asientos,"Mazda",motor,151);
-        auto.carInfo();
+        //auto.carInfo();
 
         System.out.println("\nTotal de autos: " + Auto.cantidadCreados);
 

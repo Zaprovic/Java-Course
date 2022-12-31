@@ -28,8 +28,6 @@ class Main:
         print(auto1.__dict__)
         print('\n')
 
-        auto1.carInfo()
-
         print(f'\n Total de autos: {Auto.totalAutos}')
 
 
