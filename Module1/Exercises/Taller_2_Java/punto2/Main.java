@@ -1,10 +1,11 @@
-package Module1.Exercises.Taller_1_Java.punto2;
+package Module1.Exercises.Taller_2_Java.punto2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+@SuppressWarnings("unused")
 public class Main {
     public static void main(String[] args) {
 

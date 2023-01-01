@@ -1,4 +1,50 @@
-package Module1.Exercises.Taller_1_Java.punto1;
+package Module1.Exercises.Taller_2_Java.punto1;
+
+public class Main {
+
+    public static void main(String[] args){
+
+        Animal animal1 = new Animal();
+        Animal.totalAnimales++;
+
+        Animal animal2 = new Animal();
+        Animal.totalAnimales++;
+
+        animal1.nombre = "Cebra";
+        animal1.genero = "F";
+
+        animal2.nombre = "Caballo";
+        animal2.peso = 98.2;
+
+        System.out.println(animal1.nombre + " se va a casar con "
+        + animal2.nombre);
+
+        animal1.setPareja(animal2);
+        animal2.setPareja(animal1);
+
+        Familia familia = animal1.procrear("Cebrallo");
+
+        if(familia != null){
+            familia.imprimir();
+            System.out.println(familia.hijo);
+
+        }
+
+        else{
+            System.out.println("No se pudo formar familia");
+        }
+
+        System.out.println("Total de animales: " + Animal.totalAnimales);
+
+        Animal.morir(animal2);
+
+        System.out.println("Nuevo total de animales: " + Animal.totalAnimales);
+
+
+    }
+    
+}
+
 
 class Animal{
 
@@ -78,4 +124,33 @@ class Animal{
         return "Me llamo " + nombre + " y peso " + peso;
     }
 }
+
+
+class Familia {
+
+    Animal papa;
+    Animal mama;
+    Animal hijo;
+
+    String genero;
+
+    void imprimir(){
+        
+        if(hijo.genero.equals("M")){
+            genero = "Masculino";
+
+        }
+
+        else{
+            genero = "Femenino";
+        }
+
+        System.out.println("Papa: " + papa.nombre + "\n"
+        + "Mama: " + mama.nombre + "\n" + 
+        "Hijo: " + hijo.nombre);
+    }
+    
+}
+
+
 
