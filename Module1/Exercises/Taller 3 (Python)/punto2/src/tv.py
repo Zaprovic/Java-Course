@@ -1,5 +1,4 @@
 class TV:
-
     _numTV = 0
 
     def __init__(self,marca,control,canal=1,precio=500,estado=False,volumen=1):
