@@ -1,10 +1,8 @@
 package compras;
 
-@SuppressWarnings("unused")
 public class Producto {
-
     private int codigo;
-    protected String nombre;
+    private String nombre;
     protected String tipo;
     protected static int totalProductosPedidos;
 
@@ -12,12 +10,10 @@ public class Producto {
         this.codigo = codigo;
         this.nombre = nombre;
         this.tipo = tipo;
-
     }
 
     protected void imprimirNombre(){
         System.out.print(nombre);
-
     }
 
     public int getCodigo(){
@@ -26,8 +22,8 @@ public class Producto {
 
     public static int getTotalProductosPedidos(){
         return totalProductosPedidos;
-    }
 
+    }
 
     
 }

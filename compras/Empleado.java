@@ -1,11 +1,9 @@
-package gestionHumana;
+package compras;
 
-@SuppressWarnings("unused")
 public class Empleado {
-
     public long cedula;
-    private String nombre;
-    private String cargo;
+    public String nombre;
+    public String cargo;
 
     public Empleado(long cedula, String nombre, String cargo){
         this.cedula = cedula;
@@ -17,4 +15,5 @@ public class Empleado {
         return cargo.contains("Administrador");
     }
 
+    
 }
