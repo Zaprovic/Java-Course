@@ -1,8 +1,6 @@
-package compras;
-
+package Module1.Exercises.Taller_3_Java.punto1.compras;
 import java.util.ArrayList;
 
-@SuppressWarnings("unused")
 public class OrdenCompra {
     
 

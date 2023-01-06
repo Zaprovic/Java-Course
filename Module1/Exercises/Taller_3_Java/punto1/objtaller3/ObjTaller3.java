@@ -1,12 +1,12 @@
-package objtaller3;
+package Module1.Exercises.Taller_3_Java.punto1.objtaller3;
 
 import java.util.ArrayList;
 
-import compras.Empleado;
-import compras.OrdenCompra;
-import compras.Producto;
+import Module1.Exercises.Taller_3_Java.punto1.compras.Empleado;
+import Module1.Exercises.Taller_3_Java.punto1.compras.OrdenCompra;
+import Module1.Exercises.Taller_3_Java.punto1.compras.Producto;
 
-@SuppressWarnings("unused")
+
 public class ObjTaller3 {
 
     public static void main(String[] args){
