@@ -1,5 +1,4 @@
-package Module1.Exercises.Taller_3_Java.punto1.compras;
-
+package Module1.Exercises.Taller3.Java.punto1.compras;
 public class Producto {
     private int codigo;
     private String nombre;

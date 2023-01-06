@@ -1,10 +1,12 @@
-package Module1.Exercises.Taller_3_Java.punto1.objtaller3;
+package Module1.Exercises.Taller3.Java.punto1.objtaller3;
 
 import java.util.ArrayList;
 
-import Module1.Exercises.Taller_3_Java.punto1.compras.Empleado;
-import Module1.Exercises.Taller_3_Java.punto1.compras.OrdenCompra;
-import Module1.Exercises.Taller_3_Java.punto1.compras.Producto;
+import Module1.Exercises.Taller3.Java.punto1.compras.Empleado;
+import Module1.Exercises.Taller3.Java.punto1.compras.OrdenCompra;
+import Module1.Exercises.Taller3.Java.punto1.compras.Producto;
+
+
 
 
 public class ObjTaller3 {
