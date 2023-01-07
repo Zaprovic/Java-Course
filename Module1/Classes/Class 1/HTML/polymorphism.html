@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+
+    <header>
+        <h1>Polymorphism</h1>
+    </header>
+
+    <section>
+        <p>
+            This is a confusing one to explain, but is basically making sure that any method inside a class is capable of identifying to which class is referring to. Let us consider again the same code from above:
+        </p>
+
+        <code>
+            public static class Country{ <br>
+                int population; <br>
+                String name; <br>
+                String language; <br> <br>
+    
+                public String printLanguage(){ <br>
+                    return "Here in " + this.name + " we speak " + this.language; <br>
+                &nbsp;&nbsp; &nbsp;} <br> <br>
+    
+                public void printMessage(){ <br>
+                    System.out.println("I am a citizen of the world"); <br>
+    
+                &nbsp; &nbsp;} <br>
+                
+            } <br> <br>
+
+            public static class France extends Country{<br>
+
+                @Override <br>
+                public void printMessage(){<br>
+                    System.out.println("I am a french person"); <br>
+                &nbsp; &nbsp;} <br>
+    
+    
+            } <br><br>
+    
+            public static void main(String[] args){ <br>
+    
+                Country country1 = new Country(); <br>
+                Country country2 = new France(); <br> <br>
+    
+                country1.printMessage(); <br>
+                country2.printMessage(); <br>
+    
+            }
+        </code>
+
+        <p>
+            Here in this code we have a parent class named <code>Country</code> and a child class named <code>France</code> that extends to <code>Country</code>. In the parent class we have a method named <code>printMessage()</code> and we overrode it to the child class.
+        </p>
+
+        <p>
+            When creating the instance <code>country1</code> we see it is type <code>Country</code>; and then created another instance <code>country2</code> that is type <code>France</code>. When the driver class is executed, we will see two different messages in the terminal, each one correspond to the class it was instantiated.
+        </p>
+    </section>
+    
+</body>
+</html>

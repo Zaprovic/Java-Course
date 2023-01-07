@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="../CSS/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+
+    <header>
+        <h1>Encapsulation</h1>
+    </header>
+
+    <section>
+
+        <p>
+            Hiding functionalities of a class to the user can result in a better implemented code, especially to the user, because if we let the user change literally everything in a code, that can turn out messing everything pretty bad, leading to exceptions and errors.
+        </p>
+
+        <p>
+            The main way to tackel this things is by using <em>getter</em> and <em>setter</em> methods. Consider the following code:
+        </p>
+
+        <code>
+            public class Enemy{<br><br>
+
+                private int health;<br><br>
+    
+                //setter method <br>
+                public void setHealth(int x){ <br>
+                    x = health; <br><br>
+    
+                } <br><br>
+    
+    
+                //getter method <br>
+                public void getHealth(){ <br>
+                    System.out.println("Health: " + health); <br>
+    
+                } <br> <br>
+    
+                public void talk(){ <br>
+                    System.out.println("I am going to kill you"); <br>
+                &nbsp; &nbsp;} <br><br>
+                
+            } <br><br>
+    
+            public class Vampire extends Enemy{ <br>
+    
+                @Override <br>
+                public void talk(){ <br>
+                    System.out.println("I am going to suck your blood"); <br>
+                &nbsp; &nbsp;} <br>
+            }
+        </code>
+
+        <p>
+            There are two methods implemented to set the health of an enemy equal to a number, and to retrieve that number as well. A good way of using this in a driver class would be as follows:
+        </p>
+
+        <p><strong>Good practice: </strong></p>
+
+            <code>
+
+                class Main{ <br>
+
+                    public static void main(String[] args){ <br>
+                        Enemy vampire1 = new Vampire(); <br>
+                    } <br> <br>
+        
+                    vampire1.setHealth(75); <br>
+                    vampire1.getHealth(); <br>
+                } 
+
+            </code>
+
+            <p>
+                This way is so much better and cleaner, because in less lines of codes and a more dynamic implementation we can set the health of an enemy and retrieve it back.
+            </p>
+
+            <p><strong>Bad practice</strong></p>
+
+            <code>
+
+                class Main(){ <br> <br>
+
+                    public static void main(String[] args){ <br>
+                        Enemy vampire1 = new Vampire(); <br> <br>
+        
+                        vampire1.health = 50; <br> <br>
+        
+                        System.out.println(vampire1.health); <br>
+                    &nbsp; &nbsp;} <br>
+                }
+
+            </code>
+    
+    </section>
+    
+</body>
+</html>
