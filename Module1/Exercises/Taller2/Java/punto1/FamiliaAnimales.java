@@ -1,4 +1,4 @@
-package Module1.Exercises.Taller_1_Java.punto1;
+package Module1.Exercises.Taller2.Java.punto1;
 
 public class FamiliaAnimales {
 
