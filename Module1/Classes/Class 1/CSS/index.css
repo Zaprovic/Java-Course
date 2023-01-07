@@ -1,0 +1,21 @@
+body{
+    background-color: beige;
+    font-family: sans-serif;
+}
+
+p{
+    text-align: justify;
+}
+
+header{
+    color: brown;
+}
+
+hr{
+    border: 0.1em solid;
+}
+
+dt{
+    color: rgb(20, 70, 145);
+}
+

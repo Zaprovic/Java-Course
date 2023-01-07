@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Module1\Classes\Class 1\CSS\index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class1</title>
+</head>
+<body>
+
+    <header>
+        <h1>Object Oriented Programming</h1>
+    </header>
+
+    <section>
+        <p>
+            Object oriented programming (OOP) is a type of programming that uses classes as its main way to implement code. There are 4 main pilars that one has to know:
+        </p>
+
+        <nav>
+
+            <ul>
+                <li><a href="abstraction.html">Abstraction</a></li>
+                <li><a href="inheritance.html">Inheritance</a></li>
+                <li><a href="polymorphism.html">Polymorphism</a></li>
+                <li><a href="encapsulation.html">Encapsulation</a></li>
+               
+    
+            </ul>
+        </nav>
+
+        <hr>
+
+        <dl>
+
+            <dt><h2>Abstraction</h2></dt>
+            <dd>
+                It means to only show the necessary details from an object to the user. Whenever creating a class and objects associated to it, that have functions or methods to make operations between the objects, an user wants to manipulate those objects in an easy way, without too much information requiered. For example, if someone is creating a car class, what really might be important are the implementations and functions that a car can do, rather than all the internal process needed to make the car work. 
+            </dd>
+
+            <hr>
+
+            <dt><h2>Inheritance</h2></dt>
+
+            <dd>
+                <p>
+                    Is when there is a class that belong to the same type of a major class. For example, we can have a shape class, but there are many different shapes, such as circles, triangles or squares. All of this subclasses are <em>inherited</em> from the main shape class. Other common names that subclasses receives are <em>child</em> and <em>extended</em> class, and the super class is also known as <em>base</em> or <em>parent</em> class.
+                </p>
+            </dd>
+
+            <hr>
+
+            <dt><h2>Polymorphism</h2></dt>
+
+            <dd>
+                <p>
+                    Useful to determine what kind of functions to run while the program is running. Lets say there is a parent class named <code>Enemy</code>, and there are two child classes named <code>vampire</code> and <code>werewolf</code> that inherite from <code>Enemy</code>.
+                </p>
+
+                <p>
+                    The class <code>Enemy</code> can have a method that prints a message (let's supposed the method's name is <code>printMessage()</code>) like 'I am going to kill you'. But we can override this method for both of the child classes in order to print something different, for example, for the <code>vampire</code> the method prints 'I will suck your blood'; and for the werewolf it print 'I will bite you'.
+                </p>
+
+                <p>
+                    If we create and <code>vampire</code> and <code>werewolf</code> object named <code>vampire1</code> and <code>werewolf1</code> respectively, call this method in both of them, the output message will be the respective phrase associated to the type of enemy. But if we create an <strong><code>Enemy</code></strong> object and set it equal to either <code>vampire1</code> or <code>werewolf1</code> and then call the <code>printMessage()</code> method, the output is going to correspond to whatever the method returns depending if the enemy of type werewolf of vampire, instead of returning 'I am going to kill you'.
+                </p>
+
+                <p>
+                    But of course if we create an <code>Enemy</code> object called <code>enemy1</code>, and then call <code>printMessage()</code>, the output will be 'I am going to kill you'. This is what polymorphism is all about. It is to indentify an override method from a parent class so it can return whatever it is associated to.
+                </p>
+            </dd>
+
+            <hr>
+
+            <dt><h2>Encapsulation</h2></dt>
+
+            <dd>
+                <p>
+                    It is when we hide data to the user, by restricting acces of some methods and fields of a class. This is sometimes good practica since having the user able to declare and modify some of the fields defined in a class might end up screwing up the output of a code, or yield inconsistencies. 
+                </p>
+            </dd>
+            
+
+        </dl>
+
+    </section>
+    
+</body>
+</html>

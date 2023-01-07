@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+@SuppressWarnings("unused")
 public class Main {
     public static void main(String[] args) {
 

@@ -1,5 +1,5 @@
 package Module1.Classes;
-class countries {
+public class countries {
 
     public static class Country{
         int population;
@@ -35,6 +35,7 @@ class countries {
 
         country1.printMessage();
         country2.printMessage();
+        
 
     }
 
