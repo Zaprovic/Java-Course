@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+
+    <header>
+        <h1>Abstraction</h1>
+    </header>
+
+    <section>
+
+        <p>
+            Abstraction can be achieved in multiple ways. In Java for example, there are very natural ways to implement this by using the concept of <em>abstract classes</em> and <em>interfaces</em>
+        </p>
+
+        <hr>
+
+        <dl>
+
+            <dt><h3>Abstract class</h3></dt>
+
+            <dd>
+                <p>
+                    These type of classes have a partial implementation, which means that they cannot be instantied (you will not be able to create objects of that class). This make sense when dealing with parent classes, something it will make a lot more sense to create objects of whatever the child classes are, but not objects from the parent class, since it can be confusing.
+                </p>
+
+                <code>
+                    public abstract class Country{<br>
+                        int population;<br>
+                        String name;<br>
+                        String language;<br><br>
+            
+                        public abstract void fifaCode();<br><br>
+            
+                        public String printLanguage(){<br>
+                            return "Here in " + name + " we speak " + language;<br>
+                            &nbsp;&nbsp;} <br>
+            
+                    }
+                </code>
+
+                <p>
+                    In the code above, there is a class named <code>Country</code>. For this case it is much better to make it abstract, since creating country objects is ambigous (what country is it?). Inside an abstract class we can have abstract methods as well, not all of them have to be, just the ones we want. The purpose of an abstract method is the exact same for an abstract class. In this case, the method `fifaCode()` is also better making it abstract, because every country has an unique FIFA code. These methods don't need any body, just a declaration, but keep in mind that <em>abstract methods must be overriden in any of the child classes that implement the parent class.</em>
+                </p>
+
+                <code>
+                    public class Croatia extends Country implements Nation, Territory{<br>
+            
+                        @Override <br>
+                        public void fifaCode(){ <br>
+                            System.out.println("CRO"); <br>
+                            &nbsp;&nbsp;} <br>
+                    } <br><br>
+            
+            
+                    public class Brazil extends Country{ <br>
+            
+                        @Override <br>
+                        public void fifaCode(){ <br>
+                            System.out.println("BRA"); <br>
+                            &nbsp;&nbsp;} <br>
+                    } <br><br>
+            
+                    public class Morocco extends Country{ <br>
+            
+                        @Override <br>
+                        public void fifaCode(){ <br>
+                            System.out.println("MAR"); <br>
+                        &nbsp;&nbsp;} <br>
+                    }
+                </code>
+
+                <p>
+                    From the code above, we can only create <code>Croatia</code>, <code>Brazil</code> and <code>Morocco</code> objects, since all of this are child classes that inherit from <code>Country</code> which is the parent class. As noted in the parent class, every country has the fields of population, name and language, and an abstract method is used to specify in every child class what is the corresponding fifa code.
+                </p>
+            </dd>
+
+            <hr>
+
+            <dt><h3>Interfaces</h3></dt>
+
+            <dd>
+
+                <p>
+                    This is a special kind of class that makes all methods inside of it abstract. This does the exact same thing as an abstract class would do in a particular abstract method, so what is the difference? The main difference is that <em>you can implement as many interfaces as you want, but only extend one class</em>. This means that there is no way to extend for example the <code>Morocco</code> class to both <code>Country</code> and <code>Land</code>, it is either one or another.
+                </p>
+
+                <code>
+                    public class Land{ <br>
+                        int population; <br>
+                        String name; <br>
+                    } <br><br>
+            
+                    public interface Nation{ <br>
+                        public void nationality(); <br> 
+                    } <br><br>
+            
+                    public interface Territory{ <br>
+                        public void nationalAnthemName(); <br>
+                    }
+                </code>
+
+                <p>
+                    In the example above we see that the class <code>Croatia</code> has implementations of <code>Nation</code> and <code>Territory</code>, but only extends <code>Country</code>. It cannot be extended to any other class. One last important thing is that in an implementation, <em>every field that is declared will always be static and final</em>. Which means that it's not enough just by declaring a field in an implementation, it must also have an assigned value.
+                </p>
+
+
+
+            </dd>
+
+        </dl>
+
+       
+    </section>
+    
+</body>
+</html>
