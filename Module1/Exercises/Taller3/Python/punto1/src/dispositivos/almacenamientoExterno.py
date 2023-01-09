@@ -4,21 +4,21 @@ class AlmacenamientoExterno:
     _cantidad = 0
 
     def __init__(self,nombre):
-        self.nombre = nombre
-        self.almacenamiento = Almacenamiento(1000,'HDD')
+        self._nombre = nombre
+        self._almacenamiento = Almacenamiento(1000,'HDD')
         AlmacenamientoExterno._cantidad += 1
 
     def setNombre(self,nombre):
-        self.nombre = nombre
+        self._nombre = nombre
 
     def getNombre(self):
-        return self.nombre
+        return self._nombre
 
     def setAlmacenamiento(self,almacenamiento):
-        self.almacenamiento = almacenamiento
+        self._almacenamiento = almacenamiento
 
     def getAlmacenamiento(self):
-        return self.almacenamiento
+        return self._almacenamiento
 
     @classmethod
     def getCantidad(cls):

@@ -19,4 +19,4 @@ if __name__ == '__main__':
 
     print("Cantidad de computadores: " + str(Computador._Computador_cantidad))
 
-    print(help(Computador))
+    print(dir(Computador))
